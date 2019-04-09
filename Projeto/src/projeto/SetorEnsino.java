@@ -11,12 +11,27 @@ package projeto;
  * @author coelho
  */
 public class SetorEnsino {
-
+    private Aluno alunos[];
     private Curso cursos[];
     private Professor professores[];
     private String diretor;
     private String coordenador;
 
+    public Aluno[] getAlunos() {
+        return alunos;
+    }
+
+    public void setAlunos(Aluno[] alunos) {
+        this.alunos = alunos;
+    }
+    
+    public SetorEnsino (Curso [] cursos, Professor [] professores, String diretor, String coordenador){
+        this.cursos = cursos;
+        this.professores = professores;
+        this.diretor = diretor;
+        this.coordenador = coordenador;
+    }
+    
     public boolean novoProfessor(String nome, long siape) {
         for (int i = 0; i < professores.length; i++) {
             if (professores[i] != null) {
@@ -69,17 +84,12 @@ public class SetorEnsino {
     public void setCoordenador(String coordenador) {
         this.coordenador = coordenador;
     }
-
-    public SetorEnsino(Curso[] cursos, Professor[] professores, String diretor, String coordenador) {
-        this.cursos = cursos;
-        this.professores = professores;
-        this.diretor = diretor;
-        this.coordenador = coordenador;
-    }
-
     public SetorEnsino(String diretor, String coordenador) {
         this.diretor = diretor;
         this.coordenador = coordenador;
+        alunos = new Aluno[1000];
+        professores = new Professor[60];
+        cursos = new Curso[20];        
     }
     
     
