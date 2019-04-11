@@ -108,7 +108,5 @@ public class Disciplina {
         this.ano = ano;
     }
 
-    public Disciplina(String nome) {
-        this.nome = nome;
-    }
+    
 }

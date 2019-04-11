@@ -15,14 +15,14 @@ public class Professor {
     private String areas[];
     private long siape;
 
+    public Professor(String nome) {
+        this.nome = nome;
+    }
+    
     public Professor(String nome, String[] areas, long siape) {
         this.nome = nome;
         this.areas = areas;
         this.siape = siape;
-    }
-    
-    public Professor(String nome) {
-        this.nome = nome;
     }
 
     public String[] getAreas() {
